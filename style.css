@@ -1,0 +1,390 @@
+```css * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0b0d;
+    color: #d6d0d0;
+    font-family: 'Cinzel', serif;
+    line-height: 1.6;
+}
+
+
+/* MENU */
+
+header {
+    background: linear-gradient(to bottom,
+            #050505,
+            #111114);
+
+    border-bottom: 1px solid #4a151d;
+
+    padding: 25px 10%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #9e2433;
+
+    font-family: 'UnifrakturCook', cursive;
+
+    font-size: 32px;
+
+    text-shadow: 0 0 10px #5e111b;
+}
+
+nav ul {
+    display: flex;
+
+    list-style: none;
+
+    gap: 30px;
+}
+
+nav a {
+    color: #bdb7b7;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c72c3d;
+
+    text-shadow: 0 0 8px #741522;
+}
+
+
+/* TELA INICIAL */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(circle at center,
+            #241116 0%,
+            #0b0b0d 60%);
+}
+
+.simbolo {
+    font-size: 55px;
+
+    color: #8f1d2c;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 10px #64121d,
+        0 0 25px #3c0b11;
+}
+
+h1 {
+    color: #ded6d6;
+
+    font-family: 'UnifrakturCook', cursive;
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    text-shadow:
+        3px 3px 0 #350b10,
+        0 0 20px #65131d;
+
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    max-width: 700px;
+
+    color: #aaa2a2;
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+.botao {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    border: 1px solid #7e1c29;
+
+    color: #ddd;
+
+    text-decoration: none;
+
+    background-color: #170b0e;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #741522;
+
+    color: white;
+
+    box-shadow:
+        0 0 20px rgba(180, 35, 50, 0.5);
+}
+
+
+/* CONTEÚDO */
+
+main {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.titulo-secao {
+    text-align: center;
+
+    font-family: 'UnifrakturCook', cursive;
+
+    font-size: 45px;
+
+    color: #a92334;
+
+    margin-bottom: 15px;
+}
+
+.linha {
+    width: 80px;
+
+    height: 2px;
+
+    background-color: #8c1d2a;
+
+    margin: 0 auto 45px;
+}
+
+
+/* SOBRE */
+
+.sobre {
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.sobre p {
+    color: #801414;
+
+    margin-bottom: 20px;
+
+    font-size: 17px;
+}
+
+.destaque {
+    color: #c0273a;
+}
+
+
+/* FRASE */
+
+.frase {
+    text-align: center;
+
+    padding: 70px 20px;
+
+    border-top: 1px solid #2d171b;
+
+    border-bottom: 1px solid #2d171b;
+
+    color: #8e8585;
+
+    font-style: italic;
+
+    font-size: 20px;
+}
+
+.frase span {
+    color: #b3293c;
+}
+
+
+/* POSTS */
+
+.posts {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+.post {
+    background:
+        linear-gradient(145deg,
+            #151518,
+            #0d0d0f);
+
+    border: 1px solid #302024;
+
+    padding: 30px;
+
+    transition: 0.3s;
+}
+
+.post:hover {
+    transform: translateY(-7px);
+
+    border-color: #76202b;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.post h3 {
+    color: #c7bebe;
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+}
+
+.post p {
+    color: #8f8989;
+
+    font-size: 14px;
+}
+
+.post a {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #a92536;
+
+    text-decoration: none;
+}
+
+.post a:hover {
+    color: #df4355;
+}
+
+
+/* LISTA */
+
+.minhaLista {
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.minhaLista li {
+    color: #a92334;
+
+    font-size: 14px;
+}
+
+.minhaLista li::before {
+    content: "☩ ";
+
+    color: #6d1722;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background-color: #060607;
+
+    border-top: 1px solid #2c1419;
+
+    color: #625d5d;
+
+    font-size: 13px;
+}
+
+.assinatura {
+    color: #94202f;
+
+    font-family: 'UnifrakturCook', cursive;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .minhaLista {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .titulo-secao {
+        font-size: 35px;
+    }
+}
